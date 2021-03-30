@@ -1,0 +1,98 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.main-footer {
+  color: white;
+  background-color: #24252a;
+  padding-top: 3em;
+  bottom: 0;
+  width: 100%;
+  border-radius: 20px;
+}
+.list-untyled {
+  margin-left: 3%;
+  margin-right: 20%;
+  animation-name: glaucoma;
+  animation-duration: 0.5s;
+  animation-timing-function: ease-out;
+}
+.list-untyled:hover {
+  text-decoration: underline;
+  color: black;
+}
+.col-sm {
+  margin-left: auto;
+  margin-right: auto;
+}
+.col2 {
+  margin-right: 2%;
+}
+.col1 {
+  margin-left: 2%;
+}
+img {
+  height: 50px;
+}
+.image {
+  display: flex;
+  justify-content: space-around;
+}
+* {
+  transition: 0.5s;
+}
+h2 {
+  font-family: "Lato", sans-serif;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  animation-name: swivelChair;
+  animation-duration: 2s;
+}
+@font-face {
+  font-family: "Lato";
+  font-style: italic;
+  font-weight: 900;
+  font-display: swap;
+  src: local("Lato Black Italic"), local("Lato-BlackItalic"),
+    url(https://fonts.gstatic.com/s/lato/v15/S6u_w4BMUTPHjxsI3wi_Gwfo.ttf)
+      format("truetype");
+}
+@keyframes swivelChair {
+  from {
+    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+    animation-timing-function: ease-in;
+    opacity: 1;
+  }
+
+  40% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+    animation-timing-function: ease-in;
+  }
+
+  60% {
+    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+    opacity: 1;
+  }
+
+  80% {
+    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+  }
+
+  to {
+    transform: perspective(400px);
+  }
+}
+@keyframes glaucoma {
+  from {
+    opacity: 1;
+    text-shadow: 0 0 75px black;
+    color: transparent;
+  }
+
+  to {
+    opacity: 1;
+    text-shadow: 0;
+    color: transparent;
+  }
+}
